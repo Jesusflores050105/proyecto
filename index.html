@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante Los Candiles - Cd. Valles, S.L.P.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { background-color: #f4f4f4; color: #333333; font-family: system-ui, -apple-system, sans-serif; }
+        header.header-custom { background: linear-gradient(135deg, #7A1C1C 0%, #A83232 50%, #D96B27 100%); color: #ffffff; padding: 30px 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        h1, h2, h3, .heading-custom { color: #8B0000; }
+        .content-bg-white { background-color: #ffffff; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.05); padding: 30px; }
+        .aside-box { background-color: #fff9f5; border-left: 4px solid #D96B27; padding: 20px; border-radius: 4px; }
+        footer { background-color: #2c2c2c; color: #ffffff; }
+        footer a { color: #ffc107; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+        .carousel-item img { height: 380px; object-fit: cover; }
+    </style>
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="header-custom text-center">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <div class="d-flex align-items-center mb-3 mb-md-0">
+                <img src="candiles.png" alt="Logo Los Candiles" class="me-3" width="70" height="70" style="object-fit: contain;">
+                <div class="text-start">
+                    <h1 class="text-white fw-bold m-0 display-5">Los Candiles</h1>
+                    <p class="text-warning mb-0 fs-6 italic">Sabor Tradicional de la Huasteca Potosina</p>
+                </div>
+            </div>
+            <div class="text-md-end text-center">
+                <span class="badge bg-warning text-dark fs-6 mb-1"><i class="bi bi-geo-alt-fill"></i> Cd. Valles, S.L.P.</span>
+                <p class="small text-white-50 m-0">Servicio Climatizado &amp; Wi-Fi Gratis</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning d-lg-none" href="index.html">Los Candiles</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-around">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="bi bi-house-door-fill"></i> Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-warning" href="#" id="menuDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-journal-richtext"></i> Menú y Productos
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="desayunos.html">Desayunos Huastecos</a></li>
+                            <li><a class="dropdown-item" href="comidas.html">Comida y Menú del Día</a></li>
+                            <li><a class="dropdown-item" href="bebidas.html">Bebidas y Antojitos</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-info" href="panel-reservas.html"><i class="bi bi-table"></i> Panel Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ubicacion"><i class="bi bi-map-fill"></i> Ubicación</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="container my-4">
+        <div class="row g-4">
+            <main class="col-lg-8">
+                <section class="content-bg-white mb-4">
+                    <div class="p-4 mb-4 bg-light rounded-3 border">
+                        <div class="container-fluid py-2">
+                            <h2 class="display-6 fw-bold">¡Bienvenidos a Restaurante Los Candiles!</h2>
+                            <p class="col-md-12 fs-5 text-secondary">Disfruta de la mejor gastronomía huasteca y platillos tradicionales en un ambiente familiar, cómodo y 100% climatizado en el corazón de Ciudad Valles.</p>
+                            <button class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#reservaModal">
+                                <i class="bi bi-calendar-check"></i> Reservar o Solicitar Información
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Carrusel -->
+                    <h3 class="h4 mb-3 border-bottom pb-2">Nuestras Especialidades</h3>
+                    <div id="carouselCandiles" class="carousel slide mb-4 rounded overflow-hidden shadow-sm" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselCandiles" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselCandiles" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselCandiles" data-bs-slide-to="2"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="enchiladas.jpg" class="d-block w-100" alt="Enchiladas Huastecas">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Enchiladas Huastecas con Cecina</h5>
+                                    <p>El sabor auténtico de nuestra región preparado al momento.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="carrusel.jpg" class="d-block w-100" alt="Desayunos Especiales">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Desayunos Completos</h5>
+                                    <p>Empieza tu día con café de grano, huevos al gusto y chilaquiles.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="lugar.jpg" class="d-block w-100" alt="Instalaciones del Restaurante">
+                                <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
+                                    <h5>Instalaciones Climatizadas</h5>
+                                    <p>El mejor ambiente para comer a gusto con la familia o amigos.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCandiles" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCandiles" data-bs-slide-next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                </section>
+
+                <!-- VIDEO Y MAPA -->
+                <article class="content-bg-white mb-4" id="ubicacion">
+                    <h3 class="h4 mb-3 border-bottom pb-2">Ubicación y Conócenos en Video</h3>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <h5 class="fs-6 text-muted fw-bold">Ubicación en Google Maps</h5>
+                            <div class="ratio ratio-4x3 rounded overflow-hidden border">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3698.8153444453995!2d-99.0180!3d21.9880!2m3!1f00!f00!302.4!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d603123456789%3A0x123456789abcdef!2sAv.%20Vicente%20C.%20Salazar%2C%20Ciudad%20Valles%2C%20S.L.P.!5e0!3m2!1ses-419!2smx!4v1680000000000!5m2!1ses-419!2smx" allowfullscreen="" loading="lazy"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="fs-6 text-muted fw-bold">Conoce Nuestra Gastronomía</h5>
+                            <div class="ratio ratio-4x3 rounded overflow-hidden border">
+                                <video controls class="w-100 h-100" style="object-fit: cover;">
+                                    <source src="WhatsApp Video 2026-10-01 at 7.30.19 PM.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </main>
+
+            <aside class="col-lg-4">
+                <div class="content-bg-white mb-4 text-center">
+                    <h4 class="h5 border-bottom pb-2">Chef y Tradición</h4>
+                    <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=400&q=80" class="img-thumbnail my-2" alt="Chef de Los Candiles">
+                    <p class="small text-muted mb-0">Sabor casero preparado diariamente con insumos frescos de la Huasteca.</p>
+                </div>
+                <div class="aside-box mb-4">
+                    <h4 class="h5 text-danger"><i class="bi bi-gift-fill"></i> Promoción Cumpleañero</h4>
+                    <p class="small mb-2">¡Ven a festejar tu cumpleaños con nosotros! Presenta tu identificación oficial y tu consumo de platillo principal es **gratuito** en mesas de 4 o más personas.</p>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- MODAL DE RESERVA -->
+    <div class="modal fade" id="reservaModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title"><i class="bi bi-envelope-check-fill"></i> Contacto / Reserva en Los Candiles</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formReserva">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre Completo</label>
+                            <input type="text" class="form-control" id="nombreInput" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Teléfono de Contacto</label>
+                            <input type="tel" class="form-control" id="telInput" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Interés o Servicio</label>
+                            <select class="form-select" id="servicioSelect">
+                                <option value="Reserva de Mesa">Reserva de Mesa</option>
+                                <option value="Información de Banquetes">Información de Banquetes</option>
+                                <option value="Promoción de Cumpleaños">Promoción de Cumpleaños</option>
+                                <option value="Pedidos para Llevar">Pedidos para Llevar</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer px-0 pb-0 pt-3">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                            <button type="submit" class="btn btn-danger">Enviar y Guardar Registro</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 py-4 text-center">
+        <div class="container">
+            <p class="mb-2">&copy; 2026 Restaurante Los Candiles - Ciudad Valles, San Luis Potosí.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('formReserva');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const nombre = document.getElementById('nombreInput').value.trim();
+                const telefono = document.getElementById('telInput').value.trim();
+                const servicio = document.getElementById('servicioSelect').value;
+
+                if (nombre && telefono) {
+                    const nuevaReserva = { id: Date.now(), nombre, telefono, servicio, estado: 'Pendiente' };
+                    const data = localStorage.getItem('candiles_reservas');
+                    const reservas = data ? JSON.parse(data) : [];
+                    reservas.push(nuevaReserva);
+                    localStorage.setItem('candiles_reservas', JSON.stringify(reservas));
+                    
+                    form.reset();
+                    bootstrap.Modal.getInstance(document.getElementById('reservaModal')).hide();
+                    alert('¡Solicitud registrada correctamente! Puedes verla en la página del Panel de Reservas.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

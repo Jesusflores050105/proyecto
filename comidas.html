@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comida y Menú del Día - Los Candiles</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body { background-color: #f4f4f4; color: #333333; font-family: system-ui, -apple-system, sans-serif; }
+        header.header-custom { background: linear-gradient(135deg, #7A1C1C 0%, #A83232 50%, #D96B27 100%); color: #ffffff; padding: 25px; }
+        .card-img-top { height: 200px; object-fit: cover; }
+    </style>
+</head>
+<body>
+
+    <header class="header-custom text-center">
+        <h1 class="text-white fw-bold m-0"><i class="bi bi-journal-check"></i> Comida y Menú del Día</h1>
+        <p class="text-warning mb-0">Platillos variados elaborados día con día con ingredientes frescos</p>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-warning" href="index.html">Los Candiles</a>
+            <div class="collapse navbar-collapse show">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-around">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="desayunos.html">Desayunos</a></li>
+                    <li class="nav-item"><a class="nav-link active text-warning" href="comidas.html">Comida y Menú del Día</a></li>
+                    <li class="nav-item"><a class="nav-link" href="bebidas.html">Bebidas y Antojitos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Menú del día">
+                    <div class="card-body">
+                        <h5 class="card-title text-danger fw-bold">Menú Ejecutivo del Día</h5>
+                        <p class="card-text">Incluye sopa del día, plato fuerte a elegir (guisado del día), agua fresca y postre casero.</p>
+                        <p class="fw-bold text-success fs-5">$120 MXN</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="enchiladas.jpg" class="card-img-top" alt="Tampiqueña">
+                    <div class="card-body">
+                        <h5 class="card-title text-danger fw-bold">Tampiqueña Especial Los Candiles</h5>
+                        <p class="card-text">Jugoso corte de carne servido con guacamole, entomatadas, frijoles charros y rajas de chile poblano.</p>
+                        <p class="fw-bold text-success fs-5">$190 MXN</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="https://images.unsplash.com/photo-1534939561126-855b8675edd7?auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Milanesa de Pollo">
+                    <div class="card-body">
+                        <h5 class="card-title text-danger fw-bold">Milanesa Empanizada</h5>
+                        <p class="card-text">De res o pechuga de pollo, acompañada de papas a la francesa, ensalada fresca y arroz.</p>
+                        <p class="fw-bold text-success fs-5">$140 MXN</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-outline-danger"><i class="bi bi-arrow-left"></i> Volver a la página principal</a>
+        </div>
+    </div>
+
+    <footer class="py-4 text-center bg-dark text-white">
+        <p class="mb-0">&copy; 2026 Restaurante Los Candiles</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
